@@ -6,4 +6,6 @@ fun generateRandomPassword(length: Int): String {
 }
 
 fun main() {
+    val randomPassword = generateRandomPassword(12)
+    println("Случайный пароль: $randomPassword")
 }
