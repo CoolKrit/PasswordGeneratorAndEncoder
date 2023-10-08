@@ -12,6 +12,10 @@ fun hashPassword(password: String): String {
     return BCrypt.hashpw(password, salt)
 }
 
+fun verifyPassword(plainPassword: String, hashedPassword: String): Boolean {
+    return BCrypt.checkpw(plainPassword, hashedPassword)
+}
+
 fun main() {
     val randomPassword = generateRandomPassword(12)
     println("Случайный пароль: $randomPassword")
