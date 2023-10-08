@@ -22,4 +22,11 @@ fun main() {
 
     val hashedPassword = hashPassword(randomPassword)
     println("Хеш пароля: $hashedPassword")
+
+    val userInputPassword = readLine().toString()
+    if (verifyPassword(userInputPassword, hashedPassword)) {
+        println("Пароль верный")
+    } else {
+        println("Пароль неверный")
+    }
 }
