@@ -15,4 +15,7 @@ fun hashPassword(password: String): String {
 fun main() {
     val randomPassword = generateRandomPassword(12)
     println("Случайный пароль: $randomPassword")
+
+    val hashedPassword = hashPassword(randomPassword)
+    println("Хеш пароля: $hashedPassword")
 }
